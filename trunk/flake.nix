@@ -7,19 +7,19 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-remizstd-v0_1_1.flake = false;
-  inputs.src-remizstd-v0_1_1.owner = "RemiliaScarlet";
-  inputs.src-remizstd-v0_1_1.ref   = "v0_1_1";
-  inputs.src-remizstd-v0_1_1.repo  = "remizstd";
-  inputs.src-remizstd-v0_1_1.type  = "gitlab";
+  inputs.src-remizstd-trunk.flake = false;
+  inputs.src-remizstd-trunk.owner = "RemiliaScarlet";
+  inputs.src-remizstd-trunk.ref   = "trunk";
+  inputs.src-remizstd-trunk.repo  = "remizstd";
+  inputs.src-remizstd-trunk.type  = "gitlab";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-remizstd-v0_1_1"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-remizstd-trunk"];
   in lib.mkRefOutput {
     inherit self nixpkgs ;
-    src  = deps."src-remizstd-v0_1_1";
+    src  = deps."src-remizstd-trunk";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   };
