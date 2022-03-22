@@ -8,8 +8,8 @@
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
   inputs.src-remizstd-trunk.flake = false;
+  inputs.src-remizstd-trunk.ref   = "refs/heads/trunk";
   inputs.src-remizstd-trunk.owner = "RemiliaScarlet";
-  inputs.src-remizstd-trunk.ref   = "trunk";
   inputs.src-remizstd-trunk.repo  = "remizstd";
   inputs.src-remizstd-trunk.type  = "gitlab";
   
