@@ -1,5 +1,5 @@
 {
-  description = ''Nim bindings for the ZStandard compression library.  Context-based and stream-based APIs available.  Based on the zstd.cr Crystal bindings.'';
+  description = ''Bindings for ZStandard'';
 
   inputs.flakeNimbleLib.owner = "riinr";
   inputs.flakeNimbleLib.ref   = "master";
